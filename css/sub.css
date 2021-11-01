@@ -1,0 +1,52 @@
+.site{width: 100%; height: 748px; padding-top: 189px; margin-bottom: 40px; display: flex; justify-content: space-between;}
+.site .image{width: 47%; height: 100%; background-color: #fff; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+.site .image img{height: 80%; transition: transform 0.5s;}
+.site .image:hover img{transform: scale(1.2); transition: transform 0.5s;}
+.site .des{width: 47%; padding: 40px 70px; border-radius: 20px; box-sizing: border-box; background-color: var(--sub-color2); display: flex; flex-direction: column; align-items: center;}
+.site .des h3{margin-bottom: 54px; font-size: 24px;}
+.site .des ul.btn{margin-bottom: 27px;}
+.site .des ul.btn li{font-size: 20px; margin-right: 16px; font-family: 나눔스퀘어B; float: left; background-color: var(--sub-color3); border-radius: 10px;}
+.site .des ul.btn li.margin{margin-right: 0;}
+.site .des ul.btn li:nth-child(2){background-color: var(--sub-color4); margin-right: 0;}
+.site .des ul.btn li a{padding: 17px 20.5px; display: block;}
+.site .des ul.btn li:nth-child(2) a{padding: 17px 25px;}
+.site .des ul.info{height: 100%; display: flex; flex-direction: column; justify-content: space-around;}
+.site .des ul.info li{font-size: 20px; line-height: 48px; text-align: center;}
+
+.ppt{margin-bottom: 40px; display: flex; flex-direction: column; align-items: center; background-color: #fff;}
+.ppt img{width: 80%;}
+
+/* m */
+@media screen and (min-width: 360px) and (max-width: 675px){
+
+.center{width: 90%;}
+
+.site{height: 221px; padding-top: 84px; margin-bottom: 40px;}
+.site .image img{height: 100%;}
+.site .des{padding: 17px 11px;}
+.site .des h3{margin-bottom: 10px; font-size: 14px;}    
+.site .des ul.btn{margin-bottom: 10px;}
+.site .des ul.btn li{font-size: 12px; margin-right: 8px;}
+.site .des ul.btn li a{padding: 7px 9px;}
+.site .des ul.btn li:nth-child(2) a{padding: 7px 10px;}
+.site .des ul.info li{font-size: 12px; line-height: 12px;}
+
+.ppt img{width: 100%;}
+}
+
+/* t */
+@media screen and (min-width: 676px) and (max-width: 1023px){
+.center{width: 90%;}
+
+.site{height: 449px; margin-bottom: 40px;}
+.site .image img{height: 100%;}
+.site .des{padding: 23px 30px;}
+.site .des h3{margin-bottom: 20px; font-size: 18px;}    
+.site .des ul.btn{margin-bottom: 10px;}
+.site .des ul.btn li{font-size: 16px; margin-right: 8px;}
+.site .des ul.btn li a{padding: 13px 16px;}
+.site .des ul.btn li:nth-child(2) a{padding: 13px 18px;}
+.site .des ul.info li{font-size: 16px; line-height: 32px;}
+
+.ppt img{width: 100%;}
+}

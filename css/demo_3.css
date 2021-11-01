@@ -1,0 +1,17 @@
+.container {
+	width:100%;
+}
+
+.pt-section {
+	/* height: 800px; */
+}
+
+#ptsection-one,
+#ptsection-three {
+	background-color: #5f6f81;
+}
+
+#ptsection-two,
+#ptsection-four {
+	background-color: #28292e;
+}

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 나눔스퀘어;
+    src: url(../font/NanumSquareR.woff);
+}
+
+@font-face {
+    font-family: 나눔스퀘어B;
+    src: url(../font/NanumSquareB.woff);
+}
+
+@font-face {
+    font-family: comic;
+    src: url(../font/Hey-Comic.woff);
+}
+
+:root{
+    --main-color: #c5dbc8;
+    --sub-color1: #f3f2e4;
+    --sub-color2: #ece9d2;
+    --sub-color3: #d5c5b5;
+    --sub-color4: #b89e97;
+    --sub-color5: #a58e89;
+    --font-color: #333333;
+}
+
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: var(--font-color);}
+ul{list-style-type: none;}
+body{color: var(--font-color); background-color: var(--sub-color1); font-family: 나눔스퀘어;}
+
+#wrap{width: 100%; position: relative;}
+.center{width: 75%; margin: 0 auto;}
+
+#header{height: 89px; box-sizing: border-box; background-color: var(--main-color); position: fixed; width: 100%; z-index: 999; top: 0;}
+#header #gnb ul li{width: 25%; line-height: 89px; float: left; font-family: comic; font-size: 24px; text-align: center;}
+#header #gnb ul li:first-child{height: 89px; padding: 0; position: relative; text-align:initial;}
+#header #gnb ul li:first-child a{height: 89px; position: relative;}
+#header #gnb ul li a{display: block; color: var(--sub-color4);}
+#header #gnb ul li img{width: 100%; position: absolute; top: 50%; transform: translateY(-50%);}
+
+#main{padding-top: 89px;} 
+#main .main_img{width: 100%; position: relative;}
+#main .main_img>img{width: 100%;}
+#main .main_img>div{width: 77.031%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: text 1s infinite alternate;}
+#main .main_img>div img{width: 100%;}
+
+@keyframes text{
+    0%{transform: translate(-50%, -50%);}
+    100%{transform: translate(-50%, -25%);}
+}
+
+#about{padding: 178px 0 48px; display: flex; align-items: center; flex-direction: column;}
+.title{width: 120px; padding: 15px; font-size: 20px; margin-bottom: 48px; border-radius: 15px; clear: both; text-align: center; font-family: comic; color: var(--sub-color4);  background-color: var(--main-color);}
+#about .box{width: 100%; display: flex; justify-content: space-between; margin-bottom: 50px;}
+#about .box>img{width: 30%; float: left; border-radius: 20px;}
+#about ul.info{width: 60%; padding: 20px; font-size: 18px; border-radius: 20px; display: flex; flex-direction: column; justify-content: space-around; box-sizing: border-box; background-color: #fff;}
+#about ul.tool{width: 100%; clear: both; display: flex; justify-content: space-between; margin-bottom: 50px;}
+#about ul.tool li{width: 14.062%; height: 0; padding-bottom: 14.062%; overflow: hidden; position: relative; border-radius: 50%; float: left;  color: var(--sub-color5); text-align: center; transition: 0.2s ease-in-out;}
+#about ul.tool li span{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 30px; font-family: comic; z-index: 999;}
+.chart{position: relative; width: 14.062%; height: 0; padding-bottom: 14.062%; margin:0 auto; font-size: 25px; text-align: center;}
+.chart canvas{width: 100% !important; height: 100% !important; position: absolute; top:0; left:0;}
+#about .say{width: 100%; padding: 40px; box-sizing: border-box; background-color: var(--sub-color3); text-align: center; border-radius: 20px; font-size: 18px;}
+
+#exhi{padding: 178px 0 48px; display: flex; align-items: center; flex-direction: column;}
+#exhi ul.tap_btn{margin-bottom: 44px;}
+#exhi ul.tap_btn li.on{background-color: var(--sub-color4);}
+#exhi ul.tap_btn li{padding: 10px 20px; font-size: 16px; margin-right: 24px; float: left; color: var(--sub-color1); text-align: center; background-color: var(--sub-color5); border-radius: 10px; cursor: pointer; font-family: 나눔스퀘어B;}
+#exhi ul.tap_btn li:last-child{margin-right: 0;}
+#exhi .exhi_list{width: 100%; display: flex; justify-content: space-between;}
+#exhi .exhi_list figure{width: 22.656%; text-align: center; border: 10px solid var(--main-color); box-sizing: border-box; border-radius: 20px;}
+#exhi .exhi_list.hide{display: none;}
+#exhi .exhi_list figure img{width: 100%;}
+
+#contact{padding: 178px 0 144px; display: flex; align-items: center; flex-direction: column;}
+#contact img{width: 100%;}
+
+#footer{height: 144px; background-color: var(--main-color); padding: 30px; box-sizing: border-box; font-size: 12px;}
+#footer .center{height: 100%; display: flex; justify-content: center; align-content: center;}
+#footer .center #copy{display: flex; justify-content: space-around; flex-direction: column; text-align: center;}
+
+#top{position: absolute; bottom: 192px; transform: translateX(-50%); left: 50%; cursor: pointer;}
+
+/* m */
+@media screen and (min-width: 360px) and (max-width: 675px){
+.center{width: 90%;}
+
+#header{height: 44px;}
+#header #gnb ul li{line-height: 44px; font-size: 12px;}
+#header #gnb ul li:first-child{height: 44px;}
+#header #gnb ul li:first-child a{height: 44px;}
+
+#main{padding-top: 44px;}
+
+#about{padding: 88px 0 44px;}
+.title{width: 70px; padding: 8px; margin-bottom: 30px; border-radius: 5px; font-size: 12px;}
+#about .box{margin-bottom: 30px;}
+#about ul.info{font-size: 12px;}
+#about ul.tool li span{font-size: 14px;}
+#about .say{font-size: 16px;}
+
+#exhi{padding: 44px 0;}
+#exhi ul.tap_btn li{padding: 5px 7px; font-size: 10px; border-radius: 5px; margin-right: 12px;}
+#exhi .exhi_list li{font-size: 12px;}
+#exhi .exhi_list h2{font-size: 12px;}
+#exhi .exhi_list figure{border-width: 5px; border-radius: 5px;}
+figure.effect-marley p{display: none;}
+
+#contact{padding: 44px 0 88px;}
+
+#footer{height: 60px; font-size: 12px; padding: 10px;}
+
+#top{width: 36px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 82px;}
+}
+#top img{width: 100%;}
+
+/* t */
+@media screen and (min-width: 676px) and (max-width: 1023px){
+.center{width: 90%;}
+
+#header #gnb ul li{font-size: 18px;}
+
+.title{font-size: 16px;}
+#about ul.info{font-size: 16px;}
+#about ul.tool li span{font-size: 24px;}
+
+#exhi ul.tap_btn li{font-size: 14px;}
+#exhi .exhi_list h2{font-size: 16px;}
+figure.effect-marley p{display: none;}
+
+#contact{padding: 89px 0 137px 0;}
+
+#footer{height: 131px;}
+
+#top{position: absolute; left: 50%; transform: translateX(-50%); bottom: 160px;}
+}
+
+
+

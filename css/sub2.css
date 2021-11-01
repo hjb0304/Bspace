@@ -1,0 +1,8 @@
+.site .des ul.btn{margin-bottom: 10px;}
+
+/* m */
+@media screen and (min-width: 360px) and (max-width: 675px){
+.site .des ul.btn{margin-bottom: 5px;}
+.site .des ul.btn li{margin-right: 5px;}
+.site .des ul.info li{font-size: 12px; line-height: 12px;}
+}

@@ -1,0 +1,175 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	/* padding: 1em 0 4em; */
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	background: #a58e89;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+.grid figure:hover{background: #fff;}
+.grid figure:hover figcaption{color: var(--font-color);}
+.grid figure:hover figcaption.white{color: #fff;}
+.grid figure:hover img{opacity: 1;}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.5;
+	transition: 0.3s ease-in-out;
+}
+
+.grid figure figcaption {
+	/* padding: 2em; */
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: 0.3s ease-in-out;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Marley *****/
+/*---------------*/
+
+figure.effect-marley figcaption {
+	text-align: center;
+}
+
+figure.effect-marley h2,
+figure.effect-marley p {
+	position: absolute;
+	right: 20px;
+	left: 20px;
+	padding: 10px 0;
+}
+
+
+figure.effect-marley p {
+	bottom: 30px;
+	/* line-height: 1.5; */
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+figure.effect-marley h2 {
+	top: 10px;
+	font-family: 나눔스퀘어B;
+	font-size: 18px;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-marley:hover h2 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-marley h2::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: var(--font-color);
+	content: '';
+	-webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+
+figure.effect-marley .white h2::after{background: #fff;}
+
+figure.effect-marley h2::after,
+figure.effect-marley p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-marley:hover h2::after,
+figure.effect-marley:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 675px){
+	figure.effect-marley h2,figure.effect-marley p{right: 2px; left: 2px;}
+	figure.effect-marley:hover h2 {
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,-30%,0);
+	}
+}
